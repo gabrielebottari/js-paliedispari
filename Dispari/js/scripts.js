@@ -43,11 +43,11 @@ function play() {
     //comparo il risultato della somma dei due numeri con la scelta dell'utente di pari o dispari
     // se giusta vince sennò vince la CPU
     if (result === userChoice) {
-        document.getElementById('result').innerHTML = 'You Win!';
+        document.getElementById('result').innerHTML = `${userNumber} + ${cpuNumber} = ${sum} is ${userChoice}, GG You Win!`;
         document.getElementById('result').className = "right";
         console.log("You Win!");
     } else {
-        document.getElementById('result').innerHTML = 'CPU Win!';
+        document.getElementById('result').innerHTML = `${userNumber} + ${cpuNumber} = ${sum} is not ${userChoice}, Unlucky CPU Win!`;
         document.getElementById('result').className = "wrong";
         console.log("CPU win!");
     }
