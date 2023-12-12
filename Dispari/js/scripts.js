@@ -28,7 +28,7 @@ function play() {
     console.log("Result: " + result);
 
     //controlli sull'input dell'utente sulla scelta del tag select
-    if (userChoice !== 'pari' && userChoice !== 'dispari') {
+    if (userChoice !== 'even' && userChoice !== 'odd') {
         //se non seleziona esce alert
         alert('Si prega di scegliere tra "pari" e "dispari"');
         return;
@@ -44,9 +44,11 @@ function play() {
     // se giusta vince sennò vince la CPU
     if (result === userChoice) {
         document.getElementById('result').innerHTML = 'You Win!';
+        document.getElementById('result').className = "right";
         console.log("You Win!");
     } else {
         document.getElementById('result').innerHTML = 'CPU Win!';
+        document.getElementById('result').className = "wrong";
         console.log("CPU win!");
     }
 }
